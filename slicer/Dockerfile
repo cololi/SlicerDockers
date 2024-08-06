@@ -19,8 +19,9 @@ RUN apt-get install -y libxcb-icccm4-dev libxcb-image0-dev libxcb-keysyms1-dev l
 # Slicer 4.11.20200930 https://download.slicer.org/bitstream/60add70fae4540bf6a89bfb4" && \
 # Slicer 5.0.2 https://download.slicer.org/bitstream/6286ce04e8408647b39f803a
 
-# Slicer 5.0.3
-RUN SLICER_URL="https://download.slicer.org/bitstream/62cc52d2aa08d161a31c1af0" && \
+# Slicer 5.0.3 https://download.slicer.org/bitstream/62cc52d2aa08d161a31c1af0
+# Slicer 5.6.2
+RUN SLICER_URL="https://download.slicer.org/bitstream/660fb6c930e435b0e3560453" && \
   curl -k -v -s -L $SLICER_URL | tar xz -C /tmp && \
   mv /tmp/Slicer* /opt/slicer
 
